@@ -1,0 +1,29 @@
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+header{
+    height:100vh;
+    background:#4f46e5;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    h1{
+        font-size:28px;
+    }
+
+}
