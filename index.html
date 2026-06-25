@@ -1,106 +1,161 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Landing Page</title>
+    <title>BoXe - Order Your Favourite Foods</title>
+    <meta name="description" content="BoXe - Order your favourite foods online. Fresh, healthy, and delicious meals delivered to your doorstep.">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <div class="logo">MyLogo</div>
+    <!-- Page Wrapper for split background -->
+    <div class="page-wrapper">
 
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-left">
+            <a href="#" class="logo" id="logo">BoXe</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <div class="nav-icons">
+                <button class="icon-btn" id="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+                <button class="icon-btn" id="notification-btn" aria-label="Notifications">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn-signup" id="signup-btn">Sign Up</button>
+                <button class="btn-login" id="login-btn">Log In</button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1 id="hero-heading">
+                    Order Your<br>
+                    <span class="highlight">Favourite</span> Foods
+                </h1>
+                <p class="hero-description">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur
+                    Adipiscing Elit, Sed Do Eiusmod Tempor
+                    Incididunt Ut Labore Et Dolore Magna Aliqua.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" id="set-menu-btn">Set Menu</button>
+                    <button class="btn-outline" id="explore-btn">Explore More</button>
+                </div>
 
-        <h1>Build Amazing Digital Experiences</h1>
+                <!-- Food Category Cards -->
+                <div class="food-cards">
+                    <div class="food-card card-blue" id="food-card-1">
+                        <div class="food-card-image">
+                            <img src="images/food1.png" alt="Fresh Salad Bowl">
+                        </div>
+                        <span class="food-card-label">Fresh Salad</span>
+                    </div>
+                    <div class="food-card card-green" id="food-card-2">
+                        <div class="food-card-image">
+                            <img src="images/food2.png" alt="Green Bowl">
+                        </div>
+                        <span class="food-card-label">Green Bowl</span>
+                    </div>
+                    <div class="food-card card-purple" id="food-card-3">
+                        <div class="food-card-image">
+                            <img src="images/food3.png" alt="Mixed Bowl">
+                        </div>
+                        <span class="food-card-label">Mixed Bowl</span>
+                    </div>
+                </div>
+            </div>
 
-        <p>
-            We create modern websites and digital solutions
-            to help your business grow online.
-        </p>
+            <div class="hero-right">
+                <div class="hero-circle"></div>
+                <div class="hero-image-wrapper">
+                    <img src="images/hero-bowl.png" alt="Delicious Poke Bowl" class="hero-image" id="hero-image">
+                </div>
 
-        <div class="buttons">
-            <button class="btn1">Get Started</button>
-            <button class="btn2">Learn More</button>
+                <!-- Review Card -->
+                <div class="review-card" id="review-card">
+                    <div class="review-header">
+                        <span class="review-title">Lorem Ipsum</span>
+                        <span class="review-rating">4.7 <span class="star">★</span></span>
+                    </div>
+                    <p class="review-text">
+                        Lorem Ipsum Dolor Sit Amet,
+                        Consectetur Adipiscing Elit,
+                        Sed Do Eiusmod Tempor.
+                    </p>
+                    <button class="review-btn" id="review-btn">Lorem Ipsum</button>
+                </div>
+            </div>
         </div>
-
     </section>
 
-    <!-- About Section -->
-    <section class="about">
+    </div><!-- end page-wrapper -->
 
-        <h2>About Us</h2>
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navLinks = document.getElementById('nav-links');
 
-        <p>
-            We provide high quality web development and
-            design services for businesses and startups.
-        </p>
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            mobileToggle.classList.toggle('active');
+        });
 
-    </section>
+        // Subtle floating animation for hero image
+        const heroImage = document.querySelector('.hero-image-wrapper');
+        let time = 0;
+        function floatAnimation() {
+            time += 0.02;
+            const y = Math.sin(time) * 8;
+            heroImage.style.transform = `translateY(${y}px)`;
+            requestAnimationFrame(floatAnimation);
+        }
+        floatAnimation();
 
-    <!-- Services Section -->
-    <section class="services">
+        // Staggered entrance animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, { threshold: 0.1 });
 
-        <h2>Our Services</h2>
-
-        <div class="service-boxes">
-
-            <div class="card">
-                <h3>Web Design</h3>
-                <p>Create beautiful and modern websites.</p>
-            </div>
-
-            <div class="card">
-                <h3>Development</h3>
-                <p>Fast and scalable web applications.</p>
-            </div>
-
-            <div class="card">
-                <h3>SEO</h3>
-                <p>Improve your online visibility.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-
-        <h2>Why Choose Us</h2>
-
-        <p>
-            Professional design, responsive layouts,
-            fast performance and reliable support.
-        </p>
-
-    </section>
-
-    <!-- Contact -->
-    <section class="contact">
-
-        <h2>Contact Us</h2>
-
-        <button class="btn1">Get In Touch</button>
-
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 All Rights Reserved.</p>
-    </footer>
+        document.querySelectorAll('.food-card, .review-card, .hero-left h1, .hero-left p, .hero-buttons').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 
 </body>
 </html>
